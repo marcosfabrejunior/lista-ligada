@@ -1,3 +1,7 @@
+
+/**
+ListaLigada * Aula de estrutura de dados - 28/05/2019  - Rodrigo Louback Adame
+ */
 public class ListaLigada {
 
     private Celula primeira;
@@ -28,6 +32,10 @@ public class ListaLigada {
         }
 
         this.totalDeElementos++;
+
+        System.out.println("Lista Primeiro - "+ primeira.getElemento());
+        System.out.println("Lista Ultimo - "+ ultima.getElemento());
+        System("Total "+ totalDeElementos);
     }
 
     public void removeNoComeco(){
@@ -40,6 +48,11 @@ public class ListaLigada {
         if(this.totalDeElementos == 0){
             this.ultima = null;
         }
+
+        System.out.println("============================================ ");
+        System.out.println("Lista Primeiro - "+ primeira.getElemento());
+        System.out.println("Lista Ultimo - "+ ultima.getElemento());
+        System("Total "+ totalDeElementos);
     }
 
     private boolean posicaoOcupada(int posicao){

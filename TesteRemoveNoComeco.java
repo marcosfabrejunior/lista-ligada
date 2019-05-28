@@ -1,8 +1,7 @@
 /**
- * TesteAdicionaNoComeco
- * Aula de estrutura de dados - 28/05/2019  - Rodrigo Louback Adame
+ * TesteRemoveNoComeco
  */
-public class TesteAdicionaNoComeco {
+public class TesteRemoveNoComeco {
 
     public static void main(String[] args){
         ListaLigada lista = new ListaLigada();
@@ -11,6 +10,8 @@ public class TesteAdicionaNoComeco {
         lista.adicionaNoComeco("Rodrigo");
 
         // System.out.println(lista);
+
+        lista.removeNoComeco();
     }
     
 }
