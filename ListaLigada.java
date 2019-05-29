@@ -17,9 +17,30 @@ public class ListaLigada {
             this.ultima = nova;
             this.totalDeElementos++;
         }
-    }
-    public void remove(){
 
+        System.out.println("============================================ ");
+        System.out.println("Lista Primeiro - "+ primeira.getElemento());
+        System.out.println("Lista Ultimo - "+ ultima.getElemento());
+        System.out.println("Total "+ totalDeElementos);
+    }
+    public void removeNoFim(){
+        if(!this.posicaoOcupada(0)){
+            throw new IllegalArgumentException("Posição Inválida");
+        }
+
+        if(this.totalDeElementos == 1){
+            this.removeNoComeco();
+        }else{
+            Celula penultima = this.ultima.getAnterior();
+            penultima.setProxima(null);
+            this.ultima = penultima;
+            this.totalDeElementos--;
+        }
+
+        System.out.println("============================================ ");
+        System.out.println("Lista Primeiro - "+ primeira.getElemento());
+        System.out.println("Lista Ultimo - "+ ultima.getElemento());
+        System.out.println("Total "+ totalDeElementos);
     }
 
     public void adicionaNoComeco(Object elemento){
@@ -35,7 +56,7 @@ public class ListaLigada {
 
         System.out.println("Lista Primeiro - "+ primeira.getElemento());
         System.out.println("Lista Ultimo - "+ ultima.getElemento());
-        System("Total "+ totalDeElementos);
+        System.out.println("Total "+ totalDeElementos);
     }
 
     public void removeNoComeco(){
@@ -52,7 +73,7 @@ public class ListaLigada {
         System.out.println("============================================ ");
         System.out.println("Lista Primeiro - "+ primeira.getElemento());
         System.out.println("Lista Ultimo - "+ ultima.getElemento());
-        System("Total "+ totalDeElementos);
+        System.out.println("Total "+ totalDeElementos);
     }
 
     private boolean posicaoOcupada(int posicao){
