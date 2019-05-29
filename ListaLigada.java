@@ -8,6 +8,10 @@ public class ListaLigada {
     private Celula ultima;
     private int totalDeElementos;
 
+    public void adiciona(int posicao, Object elemento){
+        
+    }
+
     public void adiciona(){
         if(this.totalDeElementos == 0){
             this.adicionaNoComeco(elemento);
